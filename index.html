@@ -29,7 +29,7 @@
         }
 
         .header-background {
-            background: url('/CA 1/imgs/bg.jpeg') no-repeat center center;
+            background: url('https://media.istockphoto.com/id/1096974470/photo/collage-of-plates-of-food-top-view.jpg?s=612x612&w=0&k=20&c=SQ-OldyCxLhKImts5NQPKOZWs8tGtwwruMSFCGXAp0c=') no-repeat center center;
             background-size: cover;
             color: white;
             text-align: center;
@@ -143,7 +143,7 @@
 </head>
 
 <body>
-
+    
     <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
         <div class="container">
             <a class="navbar-brand" href="#">BITE METER</a>
@@ -161,55 +161,70 @@
             </div>
         </div>
     </nav>
+    
 
-    <header class="header-background">
+    <header class="header-background" data-bs-spy="scroll" data-bs-target=".navbar" data-bs-offset="50" tabindex="0">
         <div class="container">
             <h1>Discover the Best Food on Campus</h1>
             <p class="lead">Rate and review your favorite food spots!</p>
             <a href="#reviews" class="btn btn-light btn-lg">Explore Now</a>
         </div>
     </header>
-
+    
     <div class="container my-4">
-        <div class="alert alert-info text-center">
+        <div class="alert alert-info alert-dismissible fade show text-center" role="alert">
             New stalls added this week! Check them out.
+            <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
         </div>
     </div>
-
+    
     <section id="stalls" class="container py-5">
         <h2 class="text-center mb-4">Available Stalls</h2>
+        <div class="alert alert-warning alert-dismissible fade show text-center" role="alert">
+            ⚠️ Desi Tadka will be closed this Sunday.
+            <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+        </div>
         <div class="row">
             <div class="col-md-4">
                 <div class="card text-center equal-height">
-                    <img src="/CA 1/imgs/Stalls.jpeg" class="card-img-top" alt="Stall 1">
+                    <img src="https://media.istockphoto.com/id/1322851571/photo/people-making-line-to-buy-food-from-food-truck.jpg?s=612x612&w=0&k=20&c=S1MmYgWP-Kc7X9tFrSj8CLAUsbD3IBwrZEj4jcs0UZA=" class="card-img-top" alt="Stall 1">
                     <div class="card-body">
-                        <h5 class="card-title">Stall 1 - The Burger Hub <span class="badge bg-primary">Top Rated</span></h5>
+                        <h5 class="card-title" data-bs-toggle="tooltip" title="Bestseller burger joint on campus">Stall 1 - The Burger Hub <span class="badge bg-primary">Top Rated</span></h5>
                         <p class="card-text">Best burgers on campus with a variety of flavors.</p>
+                        <button type="button" class="btn btn-sm btn-outline-warning" data-bs-toggle="popover" title="Burger Hub" data-bs-content="Try the double patty cheese burst!">More Info</button>
                     </div>
                 </div>
             </div>
             <div class="col-md-4">
                 <div class="card text-center equal-height">
-                    <img src="/CA 1/imgs/Stalls.jpeg" class="card-img-top" alt="Stall 2">
+                    <img src="https://media.istockphoto.com/id/1394690884/photo/food-truck-taqueria.jpg?s=612x612&w=0&k=20&c=2-UMVcBBG2PmPF80-uBuLIuilHQrCMJftZ2JzBJfFmM=" class="card-img-top" alt="Stall 2">
                     <div class="card-body">
-                        <h5 class="card-title">Stall 2 - Pizza Point</h5>
+                        <h5 class="card-title" data-bs-toggle="tooltip" title="Cheesiest pizzas around">Stall 2 - Pizza Point</h5>
                         <p class="card-text">Delicious, cheesy pizzas freshly made.</p>
+                        <button type="button" class="btn btn-sm btn-outline-warning" data-bs-toggle="popover" title="Pizza Point" data-bs-content="Customers love the Margherita special.">More Info</button>
                     </div>
                 </div>
             </div>
             <div class="col-md-4">
                 <div class="card text-center equal-height">
-                    <img src="/CA 1/imgs/Stalls.jpeg" class="card-img-top" alt="Stall 3">
+                    <img src="https://media.istockphoto.com/id/1313892527/photo/people-working-in-food-truck.jpg?s=612x612&w=0&k=20&c=9HhCXqsSgGsK7L7Sxq0v6Kd15EvkAvolcOkB685z1qw=" class="card-img-top" alt="Stall 3">
                     <div class="card-body">
-                        <h5 class="card-title">Stall 3 - Desi Tadka</h5>
+                        <h5 class="card-title" data-bs-toggle="tooltip" title="Spicy Indian flavors">Stall 3 - Desi Tadka</h5>
                         <p class="card-text">Authentic Indian street food with mouth-watering spices.</p>
+                        <button type="button" class="btn btn-sm btn-outline-warning" data-bs-toggle="popover" title="Desi Tadka" data-bs-content="Don't miss the Paneer Tikka Wrap!">More Info</button>
                     </div>
                 </div>
             </div>
         </div>
     </section>
 
+    
+    
     <section id="reviews" class="container py-5">
+        <div class="alert alert-success alert-dismissible fade show text-center" role="alert">
+            🍕 Pizza Point now offers combo meals!
+            <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+        </div>
         <h2 class="text-center mb-4">Top Reviews</h2>
         <div class="row">
             <div class="col-md-4">
@@ -244,18 +259,33 @@
             </div>
         </div>
     </section>
-
+    
+    <script>
+        const tooltipTriggerList = [].slice.call(document.querySelectorAll('[data-bs-toggle="tooltip"]'));
+        const tooltipList = tooltipTriggerList.map(function (tooltipTriggerEl) {
+            return new bootstrap.Tooltip(tooltipTriggerEl);
+        });
+    
+        const popoverTriggerList = [].slice.call(document.querySelectorAll('[data-bs-toggle="popover"]'));
+        const popoverList = popoverTriggerList.map(function (popoverTriggerEl) {
+            return new bootstrap.Popover(popoverTriggerEl);
+        });
+    </script>
+    
     <div class="container my-5">
         <div id="foodCarousel" class="carousel slide" data-bs-ride="carousel">
             <div class="carousel-inner">
                 <div class="carousel-item active">
-                    <img src="/CA 1/imgs/pizza.jpeg" class="d-block w-100" alt="Pizza">
+                    <img src="https://media.istockphoto.com/id/1189709277/photo/pasta-penne-with-roasted-tomato-sauce-mozzarella-cheese-grey-stone-background-top-view.jpg?s=612x612&w=0&k=20&c=5ro7Cvwx79tWpyN1r2hy3DwplFi5FuPrD_4DYD8tZpg=" class="d-block w-100" alt="Pizza">
                 </div>
                 <div class="carousel-item">
-                    <img src="/CA 1/imgs/burger.jpeg" class="d-block w-100" alt="Burger">
+                    <img src="https://media.istockphoto.com/id/1158623408/photo/indian-hindu-veg-thali-food-platter-selective-focus.jpg?s=612x612&w=0&k=20&c=MOm3sfIfL22URV6juSCxpA3yfr4O63yJUV5vitufR7Y=" class="d-block w-100" alt="Burger">
                 </div>
                 <div class="carousel-item">
-                    <img src="/CA 1/imgs/pasta.jpeg" class="d-block w-100" alt="Pasta">
+                    <img src="https://media.istockphoto.com/id/506583996/photo/grilled-chicken-with-quinoa-and-brown-rice-salad.jpg?s=612x612&w=0&k=20&c=mgAqaQ28v4V8r4E5jVVI7DXYmAEAjkI3d7rVXsTSb4U=" class="d-block w-100" alt="Pasta">
+                </div>
+                <div class="carousel-item">
+                    <img src="https://media.istockphoto.com/id/1230001174/photo/fried-cod-fillet-with-fresh-vegetables.jpg?s=612x612&w=0&k=20&c=d3zoqHtISpWslyS-g7iLBZnuKog3zFg2jdmfw8LlfaY=" class="d-block w-100" alt="Pasta">
                 </div>
             </div>
             <button class="carousel-control-prev" type="button" data-bs-target="#foodCarousel" data-bs-slide="prev">
@@ -266,6 +296,7 @@
             </button>
         </div>
     </div>
+    
     
 
     <section id="add-review" class="py-4 text-center">
