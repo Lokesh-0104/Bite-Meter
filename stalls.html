@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Available Stalls - Bite Meter</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"/>
+  <style>
+    body {
+      background-color: #121212; /* Dark background */
+      color: #ffffff; /* White text */
+    }
+    .stall-card {
+      background-color: #1e1e1e; /* Dark card background */
+      border-radius: 15px;
+      padding: 20px;
+      box-shadow: 0 0 10px rgba(255, 255, 255, 0.05);
+      margin-bottom: 20px;
+      transition: transform 0.3s ease-in-out;
+    }
+    .stall-card:hover {
+      transform: translateY(-5px); /* Hover effect to lift the card */
+    }
+    .stall-card img {
+      border-radius: 10px;
+      width: 100%;
+      height: 200px;
+      object-fit: cover; /* Makes sure image covers the space without stretching */
+      box-shadow: 0 0 10px rgba(255, 255, 255, 0.2);
+    }
+    .stall-card h5 {
+      color: #f39c12; /* Gold color for headings */
+    }
+    .stall-card p {
+      color: #aaa; /* Lighter text for descriptions */
+    }
+    .btn-custom {
+      background-color: #f39c12; /* Button color */
+      color: #000;
+    }
+    .btn-custom:hover {
+      background-color: #e67e22; /* Hover effect */
+    }
+    .row {
+      margin-top: 20px;
+    }
+    .btn-outline-light {
+      border: 2px solid #f39c12;
+      color: #f39c12;
+    }
+    .btn-outline-light:hover {
+      background-color: #f39c12;
+      color: #000;
+    }
+  </style>
+</head>
+<body>
+  <div class="container py-5">
+    <h1 class="text-center mb-4">Available Stalls</h1>
+
+    <div class="row">
+      <!-- Stall Cards (32 Stalls) -->
+      <div class="col-md-4 col-sm-6">
+        <div class="card stall-card">
+          <img src="https://media.istockphoto.com/id/871819296/photo/happy-woman-selling-hamburgers.jpg?s=612x612&w=0&k=20&c=piJBmH99ilwX7xZn30afVbz9fqnXjDX1QgNLvOjpZlY=" alt="Stall 1 Image">
+          <h5>Stall 1</h5>
+          <p>Delicious street food with amazing snacks.</p>
+          <a href="#" class="btn btn-custom">Visit Stall</a>
+        </div>
+      </div>
+      <div class="col-md-4 col-sm-6">
+        <div class="card stall-card">
+          <img src="https://media.istockphoto.com/id/1032338660/photo/female-food-vendor-offering-sandwiches-in-food-van.jpg?s=612x612&w=0&k=20&c=v4ugz3py0KCQvne7IQzRSkNdqLvJw4BwUrHUMzcCWys=" alt="Stall 2 Image">
+          <h5>Stall 2</h5>
+          <p>Fresh and juicy fruit juices.</p>
+          <a href="#" class="btn btn-custom">Visit Stall</a>
+        </div>
+      </div>
+      <div class="col-md-4 col-sm-6">
+        <div class="card stall-card">
+          <img src="https://media.istockphoto.com/id/1394690884/photo/food-truck-taqueria.jpg?s=612x612&w=0&k=20&c=2-UMVcBBG2PmPF80-uBuLIuilHQrCMJftZ2JzBJfFmM=" alt="Stall 3 Image">
+          <h5>Stall 3</h5>
+          <p>Perfect blend of spicy and sweet treats.</p>
+          <a href="#" class="btn btn-custom">Visit Stall</a>
+        </div>
+      </div>
+      <!-- Repeat the same structure for remaining 29 stalls (Stall 4 to Stall 32) -->
+      <div class="col-md-4 col-sm-6">
+        <div class="card stall-card">
+          <img src="https://media.istockphoto.com/id/1313892527/photo/people-working-in-food-truck.jpg?s=612x612&w=0&k=20&c=9HhCXqsSgGsK7L7Sxq0v6Kd15EvkAvolcOkB685z1qw=" alt="Stall 4 Image">
+          <h5>Stall 4</h5>
+          <p>Best coffee and snacks in town.</p>
+          <a href="#" class="btn btn-custom">Visit Stall</a>
+        </div>
+      </div>
+      <div class="col-md-4 col-sm-6">
+        <div class="card stall-card">
+          <img src="https://media.istockphoto.com/id/1051005996/photo/happy-family-buying-food-at-an-amusement-park.jpg?s=612x612&w=0&k=20&c=5fcnOiVjbI3bdFq2qvAup7bdBWVrffZZytFvJPiFys4=" alt="Stall 5 Image">
+          <h5>Stall 5</h5>
+          <p>Handmade local delicacies with love.</p>
+          <a href="#" class="btn btn-custom">Visit Stall</a>
+        </div>
+      </div>
+      <div class="col-md-4 col-sm-6">
+        <div class="card stall-card">
+          <img src="https://media.istockphoto.com/id/1563971348/photo/vintage-hot-food-container-truck-stall-at-community-fun-fair.jpg?s=612x612&w=0&k=20&c=v30Tml9we32UyFTWx1EJbZAsZIiQj_2xz30EfwOjJlU=" alt="Stall 6 Image">
+          <h5>Stall 6</h5>
+          <p>Traditional sweets with a modern twist.</p>
+          <a href="#" class="btn btn-custom">Visit Stall</a>
+        </div>
+      </div>
+      <!-- Add images and content for remaining stalls here -->
+      <!-- Example for Stall 7 -->
+      <div class="col-md-4 col-sm-6">
+        <div class="card stall-card">
+          <img src="https://media.istockphoto.com/id/93472889/photo/lining-up-at-cafe-with-tasty-pastry-for-a-snack.jpg?s=612x612&w=0&k=20&c=wrBPd5wgBpbpgp4_OWberb8OplqOWB45LivSnxMTRY8=" alt="Stall 7 Image">
+          <h5>Stall 7</h5>
+          <p>Hot and crispy snacks to delight your taste buds.</p>
+          <a href="#" class="btn btn-custom">Visit Stall</a>
+        </div>
+      </div>
+      <!-- Continue with the same for Stall 8 to Stall 32 -->
+    </div>
+
+    <!-- Back to Home Button -->
+    <div class="text-center mt-4">
+      <a href="index.html" class="btn btn-outline-light">← Back to Home</a>
+    </div>
+  </div>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
